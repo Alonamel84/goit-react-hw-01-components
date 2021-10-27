@@ -1,3 +1,5 @@
+
+import PropTypes from 'prop-types';
 import s from './Profile.module.css'
 const Profile = ({ name, avatar, tag, location, stats }) => {
     const statistical = Object.entries(stats).map(([key, value]) =>
@@ -6,13 +8,12 @@ const Profile = ({ name, avatar, tag, location, stats }) => {
             <span className={s.quantity}>{value}</span>
         </li>);
     
-    return ( <div className="profile">
-            <div className="description">
+    return (<div className={s.profile}>
+        <div className={s.description}>
             <img 
                 src={avatar}
                 alt="Аватар пользователя"
-                className="avatar"
-                style={{ display: 'block' ,width: 120, height:120, padding:20}}
+                 className={s.avatarPhoto}
                 />
             <p className={s.name}>{name}</p>
             <p className={s.tag}>{tag}</p>
@@ -21,22 +22,15 @@ const Profile = ({ name, avatar, tag, location, stats }) => {
 
         <ul className={s.stats}>
             { statistical}
-                {/* <li>
-                    <span className="label">Followers</span>
-                    <span className="quantity">{stats.followers}</span>
-                </li>
-                <li>
-                    <span className="label">Views</span>
-                    <span className="quantity">{stats.views}</span>
-                </li>
-                <li>
-                    <span className="label">Likes</span>
-                    <span className="quantity">{stats.likes}</span>
-                </li> */}
             </ul>
         </div>)
-
-
-
 };
+Profile.propTypes = {
+    name: PropTypes.string,
+    avatar: PropTypes.string,
+    tag: PropTypes.string,
+    location: PropTypes.string,
+    stats: PropTypes.objectOf(PropTypes.number)
+}
+
 export default Profile;

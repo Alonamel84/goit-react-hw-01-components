@@ -1,5 +1,5 @@
-import Transactions from "./Transactions.jsx";
-import s from './Transactions.module.css'
+import Transactions from "./TransactionsItem.jsx";
+import s from './TransactionsItem.module.css'
 const TransactionHistory = ({ items }) => {
     
     return (

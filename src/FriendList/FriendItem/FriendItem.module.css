@@ -1,5 +1,10 @@
 .item {
   margin-left: 20px;
+  border: solid 2px grey;
+  padding: 30px;
+  box-shadow: grey 2px 2px 2px;
+  background-color: rgb(228, 199, 196);
+  width: 50px;
 }
 .statusOnline::before {
   background-color: green;
@@ -18,4 +23,9 @@
   height: 20px;
   border-radius: 90px;
   margin-bottom: 10px;
+}
+.name {
+  color: rgb(4, 4, 17);
+  font-size: 20px;
+  font-weight: bold;
 }
