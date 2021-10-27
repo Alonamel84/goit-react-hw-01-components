@@ -1,0 +1,21 @@
+.item {
+  margin-left: 20px;
+}
+.statusOnline::before {
+  background-color: green;
+  display: block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 90px;
+  margin-bottom: 10px;
+}
+.statusOffline::before {
+  background-color: red;
+  display: block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 90px;
+  margin-bottom: 10px;
+}

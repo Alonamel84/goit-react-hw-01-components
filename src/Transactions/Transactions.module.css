@@ -1,0 +1,11 @@
+.table {
+  padding: 10px;
+  border: solid black 1px;
+  background-color: rgb(143, 197, 199);
+  font-size: 20px;
+}
+.transactionHistory {
+  padding: 10px;
+
+  font-size: 22px;
+}
