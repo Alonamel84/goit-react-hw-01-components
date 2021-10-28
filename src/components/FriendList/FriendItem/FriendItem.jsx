@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import defaultImg from '../img/about-icon3.png'
 import s from './FriendItem.module.css';
 const FriendItem = ({ avatar, name, isOnline,id }) => {
    
@@ -18,4 +19,7 @@ FriendItem.propTypes = {
     id: PropTypes.number,
 
 }
+FriendItem.defaultProps = {
+    avatar: defaultImg
+};
 export default FriendItem;
